@@ -20,6 +20,20 @@ body{
   100% { background-position: 0% 50%; }
 }
 
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 1s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
 
 .container{
     max-width: 1900px;
@@ -131,11 +145,15 @@ body{
     text-decoration: none;
 }
 
+
 .skills-section {
+  max-width: 1900px;
   padding: 15px;
   border-radius: 10px;
   margin: 20px;
   border: 2px solid #444;
+  box-sizing: border-box;
+  overflow: hidden;
 }
 
 .skills-title {
@@ -150,6 +168,7 @@ body{
 
 .skills-list {
   display: flex;
+  flex: 1 1 150px;
   gap: 70px;
   justify-content: center;
   flex-wrap: wrap;
@@ -197,15 +216,204 @@ body{
   transition: width 0.5s;
 }
 
-.fade-in {
-  opacity: 0;
-  transform: translateY(30px);
-  animation: fadeInUp 1s ease-out forwards;
+
+
+.projects-section {
+  max-width: 1900px;
+  height: 100%;
+  margin: 20px 20px;
+  padding: 25px;
+  background: #222;
+  border: 2px solid #333;
+  border-radius: 16px;
+  box-sizing: border-box;
+  align-items: center;
 }
 
-@keyframes fadeInUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
+.section-title {
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 40px;
+  color: #900;
+  letter-spacing: 2px;
+  font-weight: bold;
+  width: 100%;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+  justify-content: center;
+  
+}
+
+.project-card {
+  width: 100%;
+  height: 100%;
+  background: #222;
+  box-sizing: border-box;
+  border: 2px solid #444;
+  border-radius: 24px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.3);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.project-title {
+  top: 16px;
+  left: 0;
+  text-align: center;
+  color: #650000;
+  font-size: 1.8em;
+  font-weight: bold;
+  letter-spacing: 2px;
+  z-index: 2;
+  pointer-events: none;
+  margin-bottom: 5px;
+  margin-top: 15px;
+}
+
+.project-card img {
+  width: 100%;
+  height: 80%;
+  object-fit: cover;
+  border-radius: 24px 24px 0 0;
+  margin-top: 10px;
+  display: block;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.card-footer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(30, 30, 30, 0.7); 
+  text-align: center;
+  padding: 12px 0;
+}
+
+.card-footer button {
+  background: #650000;
+  color: #ccc;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 36px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background 0.3s;
+  font-weight: bold;
+}
+
+.card-footer button:hover {
+  background: #c00;
+}
+
+
+@media (max-width: 1650px) {
+  .wrapper_img img{
+    width: 650px;
+    height: 650px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+}
+
+@media (max-width: 1550px) {
+  .wrapper_img img{
+    width: 550px;
+    height: 550px;
+  }
+  .wrapper_info h1{
+    font-size: 4.2rem;
+  }
+  .skills-list{
+    gap: 65px;
+  }
+}
+
+@media (max-width: 1480px){
+    .skills-section{
+    max-width: 1470px;
+    padding: 15px;
+  }
+  .skills-title{
+    font-size: 30px;
+    margin-bottom: 5px;
+    margin-top: 15px;
+  }
+  .skill-card{
+    width: 170px;
+  }
+  .skills-list{
+    gap: 55px;
+  }
+} 
+@media (max-width: 1450px) {
+  .wrapper_img img{
+      width: 550px;
+      height: 550px;
+      position: relative;
+        right: 50px;
+  }
+  .wrapper_info p{
+    font-size: 1.15rem;
+  }
+  .wrapper_info h1{
+    font-size: 4rem;
+  }
+  .skills-list{
+    gap: 50px;
+    padding: 10px;
+  }
+  .skills-section{
+    max-width: 1470px;
+    padding: 15px;
+  }
+}
+
+@media (max-width: 1420px){
+  .skills-section{
+    display: inline;
+    overflow: hidden;
+    border: 2px solid #444;
+  }
+}
+
+@media (max-width: 1300px) {
+  .wrapper_img img{
+    width: 500px;
+    height: 500px;
+  }
+  .wrapper_info p{
+    font-size: 1.05rem;
+  }
+  .wrapper_info h1{
+    font-size: 3.7rem;
+  }
+}
+
+@media (max-width: 1170px) {
+  .wrapper_img img{
+    position: relative;
+        right: -5px;
+  }
+}
+
+@media(max-width: 1070px) {
+  .wrapper_info h1{
+    font-size: 3.4rem;
+  }
+}
+
+@media(max-width:870px) {
+  .wrapper_img img{
+    width: 450px;
+    height: 450px;
   }
 }
