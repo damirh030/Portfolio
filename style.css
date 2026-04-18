@@ -314,7 +314,6 @@ body{
   background: #c00;
 }
 
-
 @media (max-width: 1650px) {
   .wrapper_img img{
     width: 650px;
@@ -379,11 +378,19 @@ body{
 
 @media (max-width: 1420px){
   .skills-section{
-    display: inline;
+    display: flex;
+    flex-direction: column;
     overflow: hidden;
-    border: 2px solid #444;
+  }
+  .skill-card{
+    padding: 15px 18px;
+    width: 160px;
+  }
+  .skills-list{
+    gap: 70px;
   }
 }
+
 
 @media (max-width: 1300px) {
   .wrapper_img img{
@@ -415,5 +422,12 @@ body{
   .wrapper_img img{
     width: 450px;
     height: 450px;
+  }
+}
+
+@media(max-width:870px) {
+  .wrapper_img img{
+    width: 400px;
+    height: 400px;
   }
 }
