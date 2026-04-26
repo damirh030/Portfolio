@@ -10,14 +10,15 @@
     <div class="fade-in">
     <div class="container">
         <header>
+            <section id="home">
             <div class="navbar">
                 <div class="navbar-left">
                     <a href="#" class="header_desc"><span>FrontEnd <br> Developer</span></a>
                 </div>
                 <div class="navbar-right">
-                    <a href="#" class="active">Home</a>
-                    <a href="#">Skills</a>
-                    <a href="#">Projects</a>
+                    <a href="#home" class="active">Home</a>
+                    <a href="#skills">Skills</a>
+                    <a href="#projects">Projects</a>
                 </div>
             </div>
         </header>
@@ -44,7 +45,9 @@
                 </div>
             </div>
         </div>
+        </section>
         <div class="skills-section">
+            <section id="skills">
             <h2 class="skills-title">Skills</h2>
             <div class="skills-list">
                 <div class="skill-card">
@@ -108,7 +111,9 @@
                 </div>
             </div>
         </div>
-    </div> 
+    </div>
+    </section> 
+    <section id="projects">
     <div class="projects-section">
                 <h2 class="section-title">Projects</h2>
                 <div class="projects-grid">
@@ -116,7 +121,17 @@
                         <div class="project-title">Hotel</div>
                         <img src="images/hotel.png" alt="Hotel project">
                         <div class="card-footer">
-                            <button>More</button>
+                            <button class="more-btn">More</button>
+                        </div>
+                        <div class="modal">
+                            <div class="modal-content">
+                                <span class="close">&times;</span>
+                                <div class="slider">
+                                    <span class="arrow left">&#10094;</span>
+                                    <img class="slider-img" src="images/photo1.jpg" alt="Фото" style="width:300px; height:200px;">
+                                    <span class="arrow right">&#10095;</span>
+                                </div>      
+                            </div>
                         </div>
                     </div>
                     <div class="project-card">
@@ -131,5 +146,7 @@
         </div>
     </div>    
     </div>
+</section>
+<script src="script.js"></script>
 </body>
 </html>

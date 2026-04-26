@@ -7,6 +7,9 @@
     text-decoration: none;
     box-sizing: border-box;
 }
+html{
+  scroll-behavior: smooth;
+}
 body{
     color: #ccc;
     background: linear-gradient(120deg, #414345, #1c1c1c, #232526);
@@ -137,12 +140,25 @@ body{
     font-weight: 700;
     cursor: pointer;
     font-size: 1.3rem;
+    transition: background 0.3s;
+}
+
+.contacts button:hover{
+    background: #c00;
 }
 
 .contacts a{
     color: #650000;
     font-size: 1.9rem;
+    border-radius: 50%;
     text-decoration: none;
+    transition: background 0.3s;
+}
+
+.contacts a:hover{
+  background: #c00;
+  color: #ccc;
+  border-radius: 50%
 }
 
 
@@ -313,6 +329,37 @@ body{
 .card-footer button:hover {
   background: #c00;
 }
+
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 10;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+}
+
+.media-content {
+  background: #fff;
+  margin: 10% auto;
+  padding: 20px;
+  border-radius: 8px;
+  width: 300px;
+  text-align: center;
+}
+
+.close {
+  float: right;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+
+
+
 
 @media (max-width: 1650px) {
   .wrapper_img img{
