@@ -37,12 +37,18 @@
                 Etiam gravida tempus risus, et eleifend libero euismod vel. 
                 Vestibulum vel rutrum nulla, at elementum.</p>
                 <div class="contacts">
-                    <button>Contacts</button>
+                    <button id="openBtnModalContacts">Contacts</button>
                     <a href="#"><i class="fa-brands fa-github"></i></a>
                     <a href="#"><i class="fa-brands fa-instagram"></i></a>
                     <a href="#"><i class="fa-brands fa-telegram"></i></a>
                     <script src="https://kit.fontawesome.com/8257e7f57c.js" crossorigin="anonymous"></script>
+                    <div class="modal" id="contactsModal" style="display: none;">
+                        <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <!---->
+                    </div>
                 </div>
+            </div>
             </div>
         </div>
         </section>
@@ -121,24 +127,35 @@
                         <div class="project-title">Hotel</div>
                         <img src="images/hotel.png" alt="Hotel project">
                         <div class="card-footer">
-                            <button class="more-btn">More</button>
+                            <button id="openModalBtnHotel">More</button>
                         </div>
-                        <div class="modal">
+                        <div class="modal" id="modalHotel" style="display: none;">
                             <div class="modal-content">
                                 <span class="close">&times;</span>
                                 <div class="slider">
                                     <span class="arrow left">&#10094;</span>
-                                    <img class="slider-img" src="images/photo1.jpg" alt="Фото" style="width:300px; height:200px;">
+                                    <img class="slider-img" src="images/photo1.jpg" alt="Фото">
                                     <span class="arrow right">&#10095;</span>
                                 </div>      
                             </div>
                         </div>
                     </div>
+
                     <div class="project-card">
                         <div class="project-title">Portfolio</div>
                         <img src="images/portfolio.png" alt="Portfolio project">
                         <div class="card-footer">
-                            <button>More</button>
+                            <button id="openModalBtnPortfolio">More</button>
+                        </div>
+                        <div class="modal" id="modalPortfolio" style="display: none;">
+                            <div class="modal-content">
+                                <span class="close">&times;</span>
+                                <div class="slider">
+                                    <span class="arrow left">&#10094;</span>
+                                    <img class="slider-img" src="images/img1.png" alt="Фото">
+                                    <span class="arrow right">&#10095;</span>
+                                </div>      
+                            </div>
                         </div>
                     </div>
                 </div>
