@@ -1,8 +1,11 @@
 // Фотографии для каждого проекта
 const hotelPhotos = [
-    'images/photo1.jpg',
-    'images/photo2.jpg',
-    'images/photo3.jpg'
+    'images//azimutimg1.png',
+    'images//azimutimg2.png',
+    'images//azimutimg3.png',
+    'images//azimutimg4.png',
+    'images//azimutimg5.png',
+    'images//azimutimg6.png'
 ];
 const portfolioPhotos = [
     'images/img1.png',
@@ -84,4 +87,19 @@ portfolioLeft.onclick = () => {
 portfolioRight.onclick = () => {
     portfolioIndex = (portfolioIndex + 1) % portfolioPhotos.length;
     portfolioSliderImg.src = portfolioPhotos[portfolioIndex];
+};
+
+
+const toTopBtn = document.getElementById('toTopBtn');
+
+window.addEventListener('scroll', function() {
+  if (window.scrollY > 200) {
+    toTopBtn.style.display = 'flex';
+  } else {
+    toTopBtn.style.display = 'none';
+  }
+});
+
+toTopBtn.onclick = function() {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
 };
