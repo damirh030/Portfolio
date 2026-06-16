@@ -11,20 +11,25 @@
     <header class="header">
         <div class="container">
             <a href="index.html" class="logo">
-                <img src="images/image 1-no-bg-preview (carve.photos).png" alt="Лого">
-                <p class="logo__title">azimut</p>
+                <img id="img" src="images/image 1-no-bg-preview (carve.photos).png" alt="Лого">
+                <span id="img" class="logo__title">azimut</span>
             </a>
-            <nav class="header__nav">
-                <a href="#home" class="header__link">Главная</a>
-                <a href="#services" class="header__link">Услуги</a>
-                <a href="#photo" class="header__link">Фото</a>
-                <a href="#numbers" class="header__link">Номера</a>
-                <a href="#contacts" class="header__link">Контакты</a>
-            </nav>
-        </div>
+            <div class="burger" id="burgerBtn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        <nav class="header__nav" id="navMenu">
+            <a href="#home" class="header__link">Главная</a>
+            <a href="#services" class="header__link">Услуги</a>
+            <a href="#photo" class="header__link">Фото</a>
+            <a href="#numbers" class="header__link">Номера</a>
+            <a href="#contacts" class="header__link">Контакты</a>
+         </nav>
+            
     </header>
     <main>
-         <section id="home" class="desc_video">
+         <section id="home" class="desc_video section">
             <div class="container">
             <video class="video" src="video/1.mp4" alt="" autoplay muted loop>
             </div>  
@@ -40,7 +45,7 @@
 Открыт бассейн с подогревом под открытым небом, на крыше 9 этажа.Бассейн фукнционирует с мая по ноябрь 22 лежака гриль бар.</p>
             </div>
         </div>
-        <div class="booking-bar">
+        <div class="booking-bar section">
         <form id="bookingForm">
             <h3>Забронировать онлайн</h3>
             <div class="booking-fields">
@@ -110,14 +115,14 @@
         </div>
         </div>
         </section>
-        <section id="services" class="services">
+        <section id="services" class="services section">
             <div class="container">
                 <div class="container__text">
                     <h1>НАШИ УСЛУГИ</h1>
                 </div>
             </div>
         </section>
-        <section class="wrapper">
+        <section class="wrapper section">
             <div class="container container_wrapper" >
                 <div class="wrapper_text">
                     <div class="wrapper__desc">
@@ -142,7 +147,7 @@
                 </div>
             </div>
         </section>
-        <section id="photo" class="images">
+        <section id="photo" class="images section">
             <div class="container">
                 <div class="text">
                     <h1>ФОТОГРАФИИ</h1>
@@ -161,7 +166,7 @@
             </div>
         </section>
     </main>
-        <section id="numbers" class="numbers">
+        <section id="numbers" class="numbers section">
             <div class="container">
                 <div class="numbers_title">
                     <h1>НОМЕРА</h1>
@@ -268,10 +273,10 @@
             </div>
             </div>
         </section>
-        <div class="container">
+        <div class="container section">
             <h1>КОНТАКТЫ</h1>
         </div>
-        <section id="contacts" class="contacts">
+        <section id="contacts" class="contacts section">
             <div class="container container__contacts">
                 <div class="container__maps">
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d22738.791800785337!2d38.03259245921428!3d44.56942787178459!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40f2219f5a7c28b3%3A0xf0e4ac7ff56a85bc!2sMetropol%20Grand%20Hotel%20Gelendzhik!5e0!3m2!1sen!2sru!4v1768858178639!5m2!1sen!2sru" width="1600" height="900" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
@@ -279,12 +284,30 @@
                 </div>
             </div>
         </section>
-        <div class="indentation">
-
+        <footer class="footer section">
+        <div class="footer__content">
+            <div class="footer__logo">
+            <img src="images/image 1-no-bg-preview (carve.photos).png" alt="Azimut" style="height:32px;">
+            <span>azimut</span>
+            </div>
+            <div class="footer__contacts">
+            <p>г. Геленджик, Краснодарский край, ул. Революционная д.53 385461</p>
+            <p>Телефон: <a href="tel:+79001112233">+7 (900) 111-22-33</a></p>
+            <p>Email: <a href="mailto:info@azimut.ru">info@azimut.ru</a></p>
+            </div>
+            <div class="footer__links">
+            <a href="#">Instagram</a> | <a href="#">VK</a> | <a href="#">Facebook</a>
+            </div>
+            <div class="footer__copyright">
+            &copy; 2026 Azimut. Все права защищены.
+            </div>
         </div>
+        </footer>
         <button id="toTopBtn" title="Наверх">
             <i class="fa-regular fa-circle-up"></i>
         </button>
     <script src="script.js"></script> 
+    <script src="//code.jivo.ru/widget/z40t6Gqhfj" async></script>
+
 </body>
 </html>

@@ -117,3 +117,19 @@ window.addEventListener('scroll', function() {
 toTopBtn.onclick = function() {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 };
+
+  const sections = document.querySelectorAll('.section');
+  window.addEventListener('scroll', function() {
+    sections.forEach(section => {
+      const rect = section.getBoundingClientRect();
+      if(rect.top < window.innerHeight - 100) {
+        section.classList.add('visible');
+      }
+    });
+  });
+
+document.addEventListener('DOMContentLoaded', function() {
+  document.getElementById('burgerBtn').onclick = function() {
+    document.getElementById('navMenu').classList.toggle('open');
+  };
+});
