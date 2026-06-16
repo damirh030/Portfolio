@@ -505,6 +505,34 @@ html {
     background-color: #ffe9b9;
 }
 
+#toTopBtn {
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  width: 70px;
+  height: 70px;
+  border: none;
+  border-radius: 50%;
+  background: #584418;
+  color: #fff;
+  font-size: 2.7em;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s, opacity 0.2s;
+  opacity: 0.8;
+  z-index: 1000;
+}
+#toTopBtn:hover {
+  background: #b68b3c;
+  opacity: 1;
+}
+#toTopBtn i {
+  pointer-events: none;
+}
+
 
 
 
