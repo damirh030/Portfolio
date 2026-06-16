@@ -103,3 +103,17 @@ document.addEventListener('DOMContentLoaded', function() {
     
   });
 });
+
+const toTopBtn = document.getElementById('toTopBtn');
+
+window.addEventListener('scroll', function() {
+  if (window.scrollY > 200) {
+    toTopBtn.style.display = 'flex';
+  } else {
+    toTopBtn.style.display = 'none';
+  }
+});
+
+toTopBtn.onclick = function() {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+};
