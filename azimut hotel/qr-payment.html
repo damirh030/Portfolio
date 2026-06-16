@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <link rel="stylesheet" href="style.css">
+<head>
+  <meta charset="UTF-8">
+  <title>Оплата онлайн</title>
+  <style>
+    body { background: #fffbe8; font-family: sans-serif; text-align: center; }
+    .qr-block { margin: 60px auto; padding: 32px; background: #fff; border-radius: 12px; display: inline-block; }
+    .qr-block img { width: 220px; height: 220px; margin-bottom: 20px; }
+    .qr-block h2 { color: #584418; margin-bottom: 18px; }
+  </style>
+</head>
+<body>
+  <div class="qr-block">
+    <h2>Оплата через QR-код</h2>
+    <img src="images/qr.png" alt="QR-код для оплаты">
+    <p>Отсканируйте QR-код в вашем банковском приложении для оплаты бронирования.</p>
+    <p>После оплаты мы свяжемся с вами для подтверждения!</p>
+    <button id="paidBtn" class="qr-btn">Я оплатил</button>
+  </div>
+  
+  <script>
+    document.getElementById('paidBtn').addEventListener('click', function() {
+    document.querySelector('.qr-block').innerHTML = `
+      <h2 style="color:#584418;">Оплата прошла успешно!</h2>
+      <p>Мы свяжемся с вами в течении 30 минут.</p>
+      <button class="main-btn" onclick="window.location.href='index.html'">Вернуться на главную страницу</button>
+    `;
+  });
+</script>
+</body>
+</html>

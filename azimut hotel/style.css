@@ -17,6 +17,9 @@ body{
     
 
 }
+html {
+  scroll-behavior: smooth;
+}
 
 .header {
     background: #ffe9b9;
@@ -86,12 +89,240 @@ body{
     
     
 }
+
+.booking-bar {
+  background: #ffe9b9;
+  padding: 24px 32px;
+  border-radius: 12px;
+  max-width: 900px;
+  margin: 40px auto;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.09);
+}
+
+.booking-bar h3 {
+  text-align: center;
+  margin-bottom: 18px;
+  color: #000;
+  font-weight: 600;
+  font-size: 1.3em;
+}
+
+.booking-fields {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap; /* чтобы форма не ломалась на маленьких экранах */
+}
+
+.booking-field {
+  display: flex;
+  flex-direction: column;
+  min-width: 180px;
+}
+
+.booking-field label {
+  font-size: 0.95em;
+  color: #666;
+  margin-bottom: 6px;
+  margin-top: 10px;
+}
+
+.booking-field input,
+.booking-field select {
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #eee;
+  background: #fff;
+  font-size: 1.05em;
+  outline: none;
+}
+
+.booking-btn {
+  padding: 12px 28px;
+  border-radius: 8px;
+  border: none;
+  background: #584418;
+  color: #fff;
+  font-size: 1.1em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+  margin-top: 15px;
+}
+.booking-btn:hover {
+  background: #b3873a;
+}
+
+
+.modal {
+  position: fixed;
+  z-index: 1000;
+  left: 0; top: 0; width: 100%; height: 100%;
+  background: rgba(0,0,0,0.4);
+  display: none; /* скрыто по умолчанию */
+}
+.modal-content {
+  background: #fffbe8;
+  margin: 80px auto;
+  padding: 24px 32px;
+  border-radius: 10px;
+  max-width: 400px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+  position: relative;
+}
+.close {
+  position: absolute;
+  top: 10px; right: 14px;
+  font-size: 1.5em;
+  color: #584418;
+  cursor: pointer;
+}
+#modalBookingForm {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+#modalBookingForm label {
+  font-size: 1em;
+  color: #584418;
+  margin-bottom: 4px;
+  font-weight: 500;
+}
+
+#modalBookingForm input,
+#modalBookingForm select {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 1em;
+  background: #fff;
+  transition: border-color 0.2s;
+}
+
+#modalBookingForm input:focus,
+#modalBookingForm select:focus {
+  border-color: #584418;
+  outline: none;
+}
+#cardNumberGroup {
+  flex-direction: column;
+  gap: 4px;
+}
+
+.modal-btn {
+  background: #584418;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 12px;
+  font-size: 1.1em;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 8px;
+  transition: background 0.2s;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.modal-btn:hover {
+  background: #b3873a;
+}
+
+.pay-btn {
+  background: #584418;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 24px;
+  font-size: 1em;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background 0.2s;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  display: block;
+}
+
+.pay-btn:hover {
+  background: #a0742b;
+}
+
+.loader {
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #b68b3c;
+  border-radius: 50%;
+  width: 38px;
+  height: 38px;
+  animation: spin 1s linear infinite;
+  display: inline-block;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg);}
+  100% { transform: rotate(360deg);}
+}
+
+.qr-block {
+  margin: 60px auto;
+  padding: 32px;
+  background: #fff;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.09);
+}
+
+.qr-btn {
+  margin-top: 28px;
+  padding: 14px 36px;
+  background: #584418;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1em;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  transition: background 0.2s;
+  text-align: center;
+}
+
+.qr-btn:hover {
+  background: #b3873a;
+}
+.main-btn {
+  margin-top: 30px;
+  padding: 14px 36px;
+  background: #584418;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1em;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  transition: background 0.2s;
+  text-align: center;
+}
+.main-btn:hover {
+  background: #b3873a;
+}
+
 .container__text {
     margin: -15px auto 0 auto;
     font-weight: 800;
     font-size: 15px;
     line-height: 39px;
     background-color: #fff;
+    color: #000;
+    margin-bottom: 35px;
     
 }
 .wrapper .wrapper_text{

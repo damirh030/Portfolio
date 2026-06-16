@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LOTTE HOTELS</title>
+    <title>AZIMUT HOTELS</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -14,22 +14,20 @@
                 <p class="logo__title">azimut</p>
             </a>
             <nav class="header__nav">
-                <a href="#" class="header__link">Главная</a>
-                <a href="#" class="header__link">Услуги</a>
-                <a href="#" class="header__link">Фото</a>
-                <a href="#" class="header__link">Номера</a>
-                <a href="#" class="header__link">Контакты</a>
+                <a href="#home" class="header__link">Главная</a>
+                <a href="#services" class="header__link">Услуги</a>
+                <a href="#photo" class="header__link">Фото</a>
+                <a href="#numbers" class="header__link">Номера</a>
+                <a href="#contacts" class="header__link">Контакты</a>
             </nav>
         </div>
     </header>
     <main>
-         <section class="desc_video">
+         <section id="home" class="desc_video">
             <div class="container">
             <video class="video" src="video/1.mp4" alt="" autoplay muted loop>
-            </div>
-        </section>
-        
-        <section class="desc_text">
+            </div>  
+        <div class="desc_text">
             <div class="container container_desc">
                 <p class="description">Отель «CITY PLAZA» — это новое, современное, красивое здание, принимающее гостей с начала 2012г. 
                     Он имеет удобное расположение — в пяти минутах ходьбы от отеля расположены кафе, аптеки, торговый центр, центральный рынок города, магазин «Магнит», в 10 минутах ходьбы от отеля находиться городской общественный пляж с мелким песком или галькой. 
@@ -40,8 +38,78 @@
                     <br>
 Открыт бассейн с подогревом под открытым небом, на крыше 9 этажа.Бассейн фукнционирует с мая по ноябрь 22 лежака гриль бар.</p>
             </div>
+        </div>
+        <div class="booking-bar">
+        <form id="bookingForm">
+            <h3>Забронировать онлайн</h3>
+            <div class="booking-fields">
+            <div class="booking-field">
+                <label for="checkin">Заезд</label>
+                <input type="date" id="checkin" name="checkin" required>
+            </div>
+            <div class="booking-field">
+                <label for="checkout">Выезд</label>
+                <input type="date" id="checkout" name="checkout" required>
+            </div>
+            <div class="booking-field">
+                <label for="guests">Количество гостей</label>
+                <select name="guests" id="guests" required>
+                <option value="1">1</option>
+                <option value="2" selected>2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                </select>
+            </div>
+            <div class="booking-field">
+                <label for="room">Номер</label>
+                <select name="room" id="room" required>
+                <option value="">Выберите тип номера</option>
+                <option value="lux">"Люкс" номер - 6000р</option>
+                <option value="double">Двухместный - 3500р</option>
+                <option value="family">Семейный - 4300</option>
+                <option value="double standart">Двухместный стандарт - 2500р</option>
+                </select>
+            </div>
+            <button type="submit" class="booking-btn">Показать наличие</button>
+            </div>
+        </form>
+        </div>
+        <div id="bookingModal" class="modal" style="display:none;">
+        <div class="modal-content">
+            <span class="close" id="closeModal">&times;</span>
+            <h3>Введите ваши данные для бронирования</h3>
+            <form id="modalBookingForm">
+            <label>Имя:<br>
+                <input type="text" name="name" required>
+            </label><br>
+            <label>Email:<br>
+                <input type="email" name="email" required>
+            </label><br>
+            <label>Телефон:<br>
+                <input type="tel" name="phone" required>
+            </label><br>
+            <label>Способ оплаты:<br>
+                <select name="payment" id="payment" required>
+                <option value="">Выберите способ оплаты</option>
+                <option value="card">Банковская карта</option>
+                <option value="cash">Наличные</option>
+                <option value="online">Онлайн-оплата</option>
+                </select>
+            </label>
+            <div class="form-group" id="cardNumberGroup" style="display:none;">
+                <label for="cardNumber">Номер банковской карты:</label>
+                <input type="text" id="cardNumber" name="cardNumber" placeholder="0000 0000 0000 0000">
+                <button id="payBtn" class="pay-btn" style= "background:584418; display:none; margin-top:14px;">Оплатить</button>
+                <div id="loader" style="display:none; margin: 18px auto; text-align:center;"></div>
+            </div>
+            <br>
+            <button type="submit" id="modalBookBtn" style="background:#584418;color:#fff;padding:8px 16px;border:none;border-radius:6px;cursor:pointer;">Забронировать</button>
+            </form>
+            <div id="modalResult" style="margin-top:16px;"></div>
+        </div>
+        </div>
         </section>
-        <section class="services">
+        <section id="services" class="services">
             <div class="container">
                 <div class="container__text">
                     <h1>НАШИ УСЛУГИ</h1>
@@ -73,7 +141,7 @@
                 </div>
             </div>
         </section>
-        <section class="images">
+        <section id="photo" class="images">
             <div class="container">
                 <div class="text">
                     <h1>ФОТОГРАФИИ</h1>
@@ -92,7 +160,7 @@
             </div>
         </section>
     </main>
-        <section class="numbers">
+        <section id="numbers" class="numbers">
             <div class="container">
                 <div class="numbers_title">
                     <h1>НОМЕРА</h1>
@@ -108,7 +176,7 @@
                             <img id="n1" src="images/images (5).jpg" alt="">
                             <div class="number_wrapper">
                                 <div class="number_text">
-                                    <p id="desc__text">Двухместный<br> с видом на море</p>
+                                    <p id="desc__text">"Люкс" номер"<br> с видом на море</p>
                                 </div>
                                 <div class="number_btn">
                                     <div class="btn1">
@@ -158,7 +226,7 @@
                             <img id="n1" src="images/images (4).jpg" alt="">
                             <div class="number_wrapper">
                                 <div class="number_text">
-                                    <p id="desc__text">Двухместный<br> с видом на море</p>
+                                    <p id="desc__text">Номер Семейный<br></p>
                                 </div>
                                 <div class="number_btn">
                                     <div class="btn1">
@@ -182,7 +250,7 @@
                             <img id="n1" src="images/Стандарт-1.jpg" alt="">
                             <div class="number_wrapper">
                                 <div class="number_text">
-                                    <p id="desc__text">Двухместный<br> номер</p>
+                                    <p id="desc__text">Двухместный<br> номер "Стандарт"</p>
                                 </div>
                                 <div class="number_btn">
                                     <div class="btn1">
@@ -202,7 +270,7 @@
         <div class="container">
             <h1>КОНТАКТЫ</h1>
         </div>
-        <section class="contacts">
+        <section id="contacts" class="contacts">
             <div class="container container__contacts">
                 <div class="container__maps">
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d22738.791800785337!2d38.03259245921428!3d44.56942787178459!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40f2219f5a7c28b3%3A0xf0e4ac7ff56a85bc!2sMetropol%20Grand%20Hotel%20Gelendzhik!5e0!3m2!1sen!2sru!4v1768858178639!5m2!1sen!2sru" width="1600" height="900" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
@@ -213,6 +281,6 @@
         <div class="indentation">
 
         </div>
-        <script src="scripst.js"></script> 
+    <script src="script.js"></script> 
 </body>
 </html>
