@@ -31,14 +31,14 @@
                 <h1>
                     <span class="red">Hi, I'm</span><br>
                     Damir, a <span class="red">creative</span><br>
-                    developer
+                    <span id="typed-word"></span>
                 </h1>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
                 Sed sed tellus ac nisi rhoncus finibus nec ac ipsum. 
                 Etiam gravida tempus risus, et eleifend libero euismod vel. 
                 Vestibulum vel rutrum nulla, at elementum.</p>
                 <div class="contacts">
-                    <button id="openBtnModalContacts">Contacts</button>
+                    <button id="openBtnModalContacts" >Contacts</button>
                     <a href="#"><i class="fa-brands fa-github"></i></a>
                     <a href="#"><i class="fa-brands fa-instagram"></i></a>
                     <a href="#"><i class="fa-brands fa-telegram"></i></a>
@@ -118,57 +118,84 @@
                 </div>
             </div>
         </div>
-    </div>
-    </section> 
-    <section id="projects">
-    <div class="projects-section">
-                <h2 class="section-title">Projects</h2>
-                <div class="projects-grid">
-                    <div class="project-card">
-                        <div class="project-title">Hotel</div>
-                        <img src="images/hotel.png" alt="Hotel project">
-                        <div class="card-footer">
-                            <button id="openModalBtnHotel">More</button>
-                        </div>
-                        <div class="modal" id="modalHotel" style="display: none;">
-                            <div class="modal-content">
-                                <span class="close">&times;</span>
-                                <div class="slider">
-                                    <span class="arrow left">&#10094;</span>
-                                    <div class="slider-main">
-                                        <img class="slider-img" src="images/azimutimg1.png" alt="Фото">
-                                        <a href="azimut hotel/index.html" target="_blank" class="site-button">Go to the site</a>
-                                    </div>
-                                    <span class="arrow right">&#10095;</span>
-                                </div>    
+        </div>
+        </section> 
+        <section id="projects">
+        <div class="projects-section">
+                    <h2 class="section-title">Projects</h2>
+                    <div class="projects-grid">
+                        <div class="project-card">
+                            <div class="project-title">Hotel</div>
+                            <img src="images/hotel.png" alt="Hotel project">
+                            <div class="card-footer">
+                                <button id="openModalBtnHotel">More</button>
+                            </div>
+                            <div class="modal" id="modalHotel" style="display: none;">
+                                <div class="modal-content">
+                                    <span class="close">&times;</span>
+                                    <div class="slider">
+                                        <span class="arrow left">&#10094;</span>
+                                        <div class="slider-main">
+                                            <img class="slider-img" src="images/azimutimg1.png" alt="Фото">
+                                            <a href="azimut hotel/index.html" target="_blank" class="site-button">Go to the site</a>
+                                        </div>
+                                        <span class="arrow right">&#10095;</span>
+                                    </div>    
+                                </div>
                             </div>
                         </div>
-                    </div>
-
-                    <div class="project-card">
-                        <div class="project-title">Portfolio</div>
-                        <img src="images/portfolio.png" alt="Portfolio project">
-                        <div class="card-footer">
-                            <button id="openModalBtnPortfolio">More</button>
-                        </div>
-                        <div class="modal" id="modalPortfolio" style="display: none;">
-                            <div class="modal-content">
-                                <span class="close">&times;</span>
-                                <div class="slider">
-                                    <span class="arrow left">&#10094;</span>
-                                    <img class="slider-img" src="images/img1.png" alt="Фото">
-                                    <a href="index.html" target="_blank" class="site-button">Go to the site</a>
-                                    <span class="arrow right">&#10095;</span>
-                                </div>      
+                        <div class="project-card">
+                            <div class="project-title">Portfolio</div>
+                            <img src="images/portfolio.png" alt="Portfolio project">
+                            <div class="card-footer">
+                                <button id="openModalBtnPortfolio">More</button>
+                            </div>
+                            <div class="modal" id="modalPortfolio" style="display: none;">
+                                <div class="modal-content">
+                                    <span class="close">&times;</span>
+                                    <div class="slider">
+                                        <span class="arrow left">&#10094;</span>
+                                        <img class="slider-img" src="images/img1.png" alt="Фото">
+                                        <span class="arrow right">&#10095;</span>
+                                    </div>      
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
+                </div>
+        </section>
+        <div class="container">
+            <section class="portfolio-section">
+                <div class="portfolio-content">
+                <h2 class="portfolio-title">MY LATEST WORK.</h2>
+                <p class="portfolio-desc">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, hic! Harum quis, cum velit neque esse eos molestias doloremque explicabo!
+                </p>
+                <a href="#" class="portfolio-btn">View all projects</a>
+                </div>
+                <div class="portfolio-gallery">
+                    <div class="portfolio-card">
+                        <img src="images/latest-work-1.png" alt="work1" class="portfolio-img">
+                        <button class="view-btn">Посмотреть</button>
+                    </div>
+                    <div class="portfolio-card">
+                        <img src="images/latest-work-2.png" alt="work2" class="portfolio-img">
+                        <button class="view-btn">Посмотреть</button>
+                    </div>
+                    <div class="portfolio-card">
+                        <img src="images/latest-work-3.png" alt="work3" class="portfolio-img">
+                        <button class="view-btn">Посмотреть</button>
+                    </div>
+                </div>
+             </section>
         </div>
-    </div>    
+<div class="modal" id="photoModal">
+    <span class="modal-close" id="closeModal">&times;</span>
+    <img class="modal-content" id="modalImg">
+</div>
+        </div>    
     </div>
-</section>
 <button id="toTopBtn" title="Наверх">
   <i class="fa-regular fa-circle-up"></i>
 </button>
@@ -177,5 +204,6 @@
 
 
 <script src="script.js"></script>
+<script src="modal-img.js"></script>
 </body>
 </html>

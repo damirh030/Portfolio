@@ -1,3 +1,37 @@
+const words = ["developer", "designer"];
+const el = document.getElementById("typed-word");
+let wordIndex = 0;
+let charIndex = 0;
+let typing = true;
+
+function typeEffect() {
+  const currentWord = words[wordIndex];
+
+  if (typing) {
+    if (charIndex < currentWord.length) {
+      el.textContent = currentWord.slice(0, charIndex + 1);
+      charIndex++;
+      setTimeout(typeEffect, 100);
+    } else {
+      setTimeout(() => {
+        typing = false;
+        setTimeout(typeEffect, 400);
+      }, 1200);
+    }
+  } else {
+    if (charIndex > 0) {
+      el.textContent = currentWord.slice(0, charIndex - 1);
+      charIndex--;
+      setTimeout(typeEffect, 60);
+    } else {
+      wordIndex = (wordIndex + 1) % words.length;
+      typing = true;
+      setTimeout(typeEffect, 300);
+    }
+  }
+}
+
+typeEffect();
 // Фотографии для каждого проекта
 const hotelPhotos = [
     'images//azimutimg1.png',
@@ -103,3 +137,5 @@ window.addEventListener('scroll', function() {
 toTopBtn.onclick = function() {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 };
+
+
