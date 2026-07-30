@@ -34,17 +34,22 @@ function typeEffect() {
 typeEffect();
 // Фотографии для каждого проекта
 const hotelPhotos = [
-    'images//azimutimg1.png',
-    'images//azimutimg2.png',
-    'images//azimutimg3.png',
-    'images//azimutimg4.png',
-    'images//azimutimg5.png',
-    'images//azimutimg6.png'
+    'images/work 1/azimutimg1.png',
+    'images/work 1/azimutimg2.png',
+    'images/work 1/azimutimg3.png',
+    'images/work 1/azimutimg4.png',
+    'images/work 1/azimutimg5.png',
+    'images/work 1/azimutimg6.png'
 ];
 const portfolioPhotos = [
-    'images/img1.png',
-    'images/img2.png',
-    'images/img3.png'
+    'images/work 2/img1.png',
+    'images/work 2/img2.png',
+    'images/work 2/img3.png'
+];
+const weatherPhotos = [
+    'images/work 3/weatherwork1.png',
+    'images/work 3/weatherwork2.png',
+    'images/work 3/weatherwork3.png'
 ];
 //--- Contacts modal--- 
 const openBtn = document.getElementById('openBtnModalContacts');
@@ -121,6 +126,32 @@ portfolioLeft.onclick = () => {
 portfolioRight.onclick = () => {
     portfolioIndex = (portfolioIndex + 1) % portfolioPhotos.length;
     portfolioSliderImg.src = portfolioPhotos[portfolioIndex];
+};
+
+let weatherIndex = 0;
+const weatherModal = document.getElementById('modalWeather');
+const weatherBtn = document.getElementById('openModalBtnWeather');
+const weatherClose = weatherModal.querySelector('.close');
+const weatherSliderImg = weatherModal.querySelector('.slider-img');
+const weatherLeft = weatherModal.querySelector('.arrow.left');
+const weatherRight = weatherModal.querySelector('.arrow.right');
+
+weatherBtn.onclick = () => {
+    weatherIndex = 0;
+    weatherSliderImg.src = weatherPhotos[weatherIndex];
+    weatherModal.style.display = 'block';
+};
+weatherClose.onclick = () => weatherModal.style.display = 'none';
+weatherModal.onclick = e => {
+    if (!weatherModal.querySelector('.modal-content').contains(e.target)) weatherModal.style.display = 'none';
+};
+weatherLeft.onclick = () => {
+    weatherIndex = (weatherIndex - 1 + weatherPhotos.length) % weatherPhotos.length;
+    weatherSliderImg.src = weatherPhotos[weatherIndex];
+};
+weatherRight.onclick = () => {
+    weatherIndex = (weatherIndex + 1) % weatherPhotos.length;
+    weatherSliderImg.src = weatherPhotos[weatherIndex];
 };
 
 
