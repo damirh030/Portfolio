@@ -52,24 +52,10 @@ const weatherPhotos = [
     'images/work 3/weatherwork3.png'
 ];
 
-// Открытие модального окна
-openBtn.onclick = function() {
-  modal.style.display = 'block';
-}
 
-// Закрытие по крестику
-closeBtn.onclick = function() {
-  modal.style.display = 'none';
-}
 
-// Закрытие по клику вне окна
-modal.onclick = function(event) {
-  if (!modalContent.contains(event.target)) {
-    modal.style.display = 'none';
-  }
-}
 
-// --- HOTEL MODAL ---
+
 let hotelIndex = 0;
 const hotelModal = document.getElementById('modalHotel');
 const hotelBtn = document.getElementById('openModalBtnHotel');
@@ -163,5 +149,3 @@ window.addEventListener('scroll', function() {
 toTopBtn.onclick = function() {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 };
-
-
