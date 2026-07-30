@@ -51,11 +51,6 @@ const weatherPhotos = [
     'images/work 3/weatherwork2.png',
     'images/work 3/weatherwork3.png'
 ];
-//--- Contacts modal--- 
-const openBtn = document.getElementById('openBtnModalContacts');
-const modal = document.getElementById('contactsModal');
-const closeBtn = modal.querySelector('.close');
-const modalContent = modal.querySelector('.modal-content');
 
 // Открытие модального окна
 openBtn.onclick = function() {
